@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diversas Variedades</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            cursor: auto; /* Garantindo que o cursor não desapareça */
+            opacity: 0;
+            animation: fade-in 1s ease-out forwards;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            animation: fade-in 2s ease-out 0.5s forwards;
+        }
+
+        header img {
+            height: 50px;
+            margin-right: 1rem;
+            opacity: 0;
+            animation: fade-in 2s ease-out 1s forwards;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            opacity: 0;
+            animation: fade-in 2s ease-out 1.2s forwards;
+        }
+
+        nav {
+            text-align: center;
+            margin: 2rem 0;
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            animation: fade-in 2s ease-out 1.5s forwards;
+        }
+
+        nav a {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            opacity: 0;
+            animation: fade-in 2s ease-out 2s forwards;
+        }
+
+        nav a:hover {
+            background-color: #8f23fc;
+            transform: scale(1.1);
+        }
+
+        nav a i {
+            margin-right: 0.5rem;
+        }
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: flex-start;
+            padding: 2rem 1rem;
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            animation: fade-in 2s ease-out 2.5s forwards;
+        }
+
+        .video-card {
+            width: 45%;
+            max-width: 400px;
+            margin-bottom: 1rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            animation: fade-in 2s ease-out 3s forwards;
+        }
+
+        .video-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            opacity: 0;
+            animation: fade-in 2s ease-out 3.5s forwards;
+        }
+
+        .video-card img:hover {
+            transform: scale(1.1);
+        }
+
+        video.background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .glow {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 50px;
+            height: 50px;
+            animation: glow-animation 2.5s ease-in-out infinite;
+            z-index: 9999; /* Garantindo que o brilho fique no topo de tudo */
+        }
+
+        @keyframes glow-animation {
+            0% {
+                transform: translate(-50%, -50%) scale(0.9);
+                opacity: 0.3;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(0.9);
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .tutorials-section {
+            position: relative;
+            z-index: 3;
+        }
+
+        .social-icons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+
+        .social-icons a {
+            font-size: 2rem;
+            color: #fff;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #8f23fc;
+            transform: scale(1.2); /* Pulsar */
+        }
+
+    </style>
+</head>
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="https://www.dropbox.com/scl/fi/dbt8915vhnwvw2mb7be1g/37783-414754833_small.mp4?rlkey=tipqzrq4swc4bv97vlqfqwku5&st=8flk1wec&raw=1" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+
+    <header>
+        <img src="https://www.dropbox.com/scl/fi/78h41v9pj0m2qo06nijgv/Designsemnome-ezgif.com-gif-maker.gif?rlkey=5qhu8ouaz9ysqgr5kls0wjq5s&dl=1" alt="Logo do site">
+        <h1>Diversas Variedades</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">
+            <i class="fas fa-home"></i> Página Inicial
+        </a>
+        <a href="tutoriais.html">
+            <i class="fas fa-book"></i> Tutoriais
+        </a>
+        <a href="scripts.html">
+            <i class="fas fa-code"></i> Scripts
+        </a>
+        <a href="loja.html">
+            <i class="fas fa-shopping-cart"></i> Loja
+        </a>
+    </nav>
+
+    <section class="tutorials-section">
+        <h2 style="text-align: center; color: #fff;">Tutoriais de Scripts</h2>
+        <div class="video-container">
+            <div class="video-card">
+                <a href="https://www.youtube.com/watch?v=frk0pVpe6Vg" target="_blank">
+                    <img src="https://www.dropbox.com/scl/fi/t5p91bnkdenypfofrlwg2/khan-removebg-preview-1.png?rlkey=ctf435oph4penbvtd0m6t4i48&st=qlky9afq&raw=1" alt="KhanWare">
+                </a>
+                <p>KhanWare</p>
+            </div>
+            <div class="video-card">
+                <a href="https://youtu.be/Fd5FEEmTYtg?si=bfcN0JfYh9s2-dpH" target="_blank">
+                    <img src="https://www.dropbox.com/scl/fi/3z058ue9esfkna5ym9w9l/Novo_projeto_4_AEDC212-1-removebg-preview.png?rlkey=d2hy9prbamjkhzahtqo5jgcrb&st=sacz4esa&raw=1" alt="CMSP Doritus">
+                </a>
+                <p>CMSP Doritus</p>
+            </div>
+            <div class="video-card">
+                <a href="https://youtu.be/JPmqLRyR1x8?si=T6cYD5-2y_qNUFzx" target="_blank">
+                    <img src="https://www.dropbox.com/scl/fi/8dunjaul33gdcen9rrrxb/Novo_projeto_4_4A1EEC9-removebg-preview.png?rlkey=65yqq2etqzsl1qetuk6dcug3d&st=qtx10pt8&raw=1" alt="Alura Destroyer">
+                </a>
+                <p>Alura Destroyer</p>
+            </div>
+            <div class="video-card">
+                <a href="https://youtu.be/wQc4KsTsH1Q?si=Sg3XpHUCqyHOXhQN" target="_blank">
+                    <img src="https://www.dropbox.com/scl/fi/7qlf87ofllapqe5dt88ur/maxresdefault-removebg-preview.png?rlkey=hlzlj61ojb1ij9e142rrdzysj&st=3nwh4h0s&raw=1" alt="Matific">
+                </a>
+                <p>Matific</p>
+            </div>
+            <div class="video-card">
+                <a href="https://youtu.be/F1wA_a9LG_4?si=T3mXTWIxxiH0IxG5" target="_blank">
+                    <img src="https://www.dropbox.com/scl/fi/wz3kbuk0912furcf05iqo/Design_sem_nome-removebg-preview-1.png?rlkey=bbtofch8ekhhr11r6uf04dtx1&st=dvvko6r7&raw=1" alt="KhanTool" style="height: auto;">
+                </a>
+                <p>KhanTool</p>
+            </div>
+            <div class="video-card">
+                <a href="https://youtu.be/JSdccHir91c?si=CLEZXjaAdsH_DVf5" target="_blank">
+                    <img src="https://www.dropbox.com/scl/fi/pqhs7t1r1zrekwkd6evch/Novo_projeto_26_7A27475-removebg-preview-1.png?rlkey=o8w17wpwqugq66swpda627j84&st=ajtvbsz7&raw=1" alt="LeiaSP">
+                </a>
+                <p>LeiaSP</p>
+            </div>
+            <div class="video-card">
+                <a href="https://www.youtube.com/shorts/Np1A63ee9Eg" target="_blank">
+                    <img src="https://www.dropbox.com/scl/fi/75rdnz2eour2kw8gzudis/Speak-removebg-preview.png?rlkey=6lm7lyucqjistcozd15437omf&st=61homciy&raw=1" alt="SPeak">
+                </a>
+                <p>SPeak</p>
+            </div>
+            <div class="video-card">
+                <a href="https://youtu.be/SI0oE_a6gT4?si=GOQ3zAj3quqe8nfJ" target="_blank">
+                    <img src="https://www.dropbox.com/scl/fi/4tccj8z3d0vgcgn07jfmu/Novo_projeto_26_AE1792D-removebg-preview.png?rlkey=ze7ua1wtveh7j4saftz20oar6&st=mqm2gvqp&raw=1" alt="MeSalva! Cheeto">
+                </a>
+                <p>MeSalva! Cheeto</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="social-icons">
+        <a href="https://discord.gg/cbeK2exF5U" target="_blank" class="discord-icon">
+            <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://www.instagram.com/kenas_1/" target="_blank" class="instagram-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/DiversasVariedades" target="_blank" class="github-icon">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.youtube.com/@diversas_variedades/videos" target="_blank" class="youtube-icon">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+
+    <script>
+        let glowElement = document.createElement("div");
+        glowElement.classList.add("glow");
+        document.body.appendChild(glowElement);
+
+        let x = 0;
+        let y = 0;
+
+        document.addEventListener("mousemove", (event) => {
+            x = event.clientX;
+            y = event.clientY;
+            glowElement.style.left = `${x}px`;
+            glowElement.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
